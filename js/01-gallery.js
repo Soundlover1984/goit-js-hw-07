@@ -21,15 +21,15 @@ const instance = basicLightbox.create(
   `<img width="1280" height="auto" src="">`,
   {
     onShow: (instance) => {
-      window.addEventListener("keydown", onEscKeyPress);
+      window.addEventListener("keydown", onEscapePress);
     },
     onClose: (instance) => {
-      window.removeEventListener("keydown", onEscKeyPress);
+      window.removeEventListener("keydown", onEscapePress);
     },
   }
 );
 
-function onEscKeyPress(event) {
+function onEscapePress(event) {
   if (event.code !== "Escape") return;
   instance.close();
 }
