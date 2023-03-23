@@ -18,8 +18,7 @@ function galleryItemsCreate(items) {
 galleryBox.insertAdjacentHTML("beforeend", markupItems);
  
 const instance = basicLightbox.create(
-  `
-<img width="1280" height="auto" src="">`,
+  `<img width="1280" height="auto" src="">`,
   {
     onShow: (instance) => {
       window.addEventListener("keydown", onEscKeyPress);
